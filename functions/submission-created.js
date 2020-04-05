@@ -1,15 +1,11 @@
-exports.handler = function(event, context, callback) {
+exports.handler = function(event, context) {
 	
   const formBody = JSON.parse(event.body).payload;
+  let payload = JSON.parse(event.body).payload;
 
-  return {
-    statusCode: 200,
-    body: JSON.stringify({
-      success: true,
-    })
-  }
 
 	console.log(formBody);
+	console.log(payload);
 
 
 }
