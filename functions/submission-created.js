@@ -4,11 +4,11 @@ exports.handler = function(event, context) {
 	
 
   const params = JSON.parse(event.body);
-  const name = params.name || "World";
+  const name = params.firstname || "World";
 
   return {
     statusCode: 200,
-    body: `Hello, ${name}`
+    body: `Hello, ${firstname}`
   };
 
 }
