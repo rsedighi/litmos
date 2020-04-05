@@ -18,7 +18,9 @@ exports.handler = function(event, context) {
   
 
 
-  console.log(fname, lname, email);
+  console.log(fname);
+  console.log(lname);
+  console.log(email);
   console.log(payload.data);
 
 
