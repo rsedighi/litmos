@@ -11,6 +11,9 @@ exports.handler = function(event, context) {
     body: `Hello, ${name}`
   };
 
+   console.log(name)
+
+
 }
 
 
