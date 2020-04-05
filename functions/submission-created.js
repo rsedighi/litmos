@@ -11,14 +11,8 @@
 exports.handler = function(event, context) {
 	
   const  payload = JSON.parse(event.body);
-  // const result = await client.create({ _type: 'submission.form', ...payload })
-  callback(null, {
-    statusCode: 200
-    console.log(payload)
-  }) 
 
-
-console.log(payload)
+  console.log(payload);
 
 
  //  let payload = JSON.parse(event.body).payload;
