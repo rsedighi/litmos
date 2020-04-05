@@ -3,7 +3,7 @@
 exports.handler = function(event, context) {
 	
 
-  const params = JSON.parse(event.body);
+  const params = event.queryStringParameters.name;
   const name = params.name || "World";
 
   return {
