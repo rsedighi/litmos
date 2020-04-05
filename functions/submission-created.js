@@ -12,16 +12,16 @@ exports.handler = function(event, context) {
 	
   const  payload = JSON.parse(event.body.payload);
 
-  const fname = payload.firstname;
-  const lname = payload.lastname;
-  const email = payload.email;
+  // const fname = payload.firstname;
+  // const lname = payload.lastname;
+  // const email = payload.email;
   
 	console.log(payload);
 
   // console.log(fname);
   // console.log(lname);
   // console.log(email);
-  console.log(payload.data);
+  // console.log(payload.data);
 
 
 // var myHeaders = new Headers();
