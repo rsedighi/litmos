@@ -1,9 +1,9 @@
 exports.handler = function(event, context, callback) {
 	
-  const formBody = JSON.parse(event.body).payload
+  const formBody = JSON.parse(event.body).payload;
 
 
-	console.log(formBody)
+	console.log(formBody);
 
 
 }
