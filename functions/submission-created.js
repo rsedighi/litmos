@@ -16,11 +16,11 @@ exports.handler = function(event, context) {
   const lname = payload.lastname;
   const email = payload.email;
   
+	console.log(payload);
 
-
-  console.log(fname);
-  console.log(lname);
-  console.log(email);
+  // console.log(fname);
+  // console.log(lname);
+  // console.log(email);
   console.log(payload.data);
 
 
