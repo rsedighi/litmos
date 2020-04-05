@@ -1,17 +1,39 @@
+// const client =  {
+// 			"url": "https://api.litmos.com/v1.svc/users?source=ramin&sendmessage=true",
+// 			"method": "POST",
+// 			"timeout": 0,
+// 			"headers": {
+// 				"Content-Type": "application/json",
+// 				"apikey": "e8DE41C4-6167-43BC-BE78-19E522DB8668"
+// 			}
 
 
 exports.handler = function(event, context) {
 	
+  const  payload = JSON.parse(event.body)
+  // const result = await client.create({ _type: 'submission.form', ...payload })
+  callback(null, {
+    statusCode: 200
+    console.log(payload)
+  }) 
 
-  const params = JSON.parse(event.body);
-  const name = params.firstname || "World";
 
-  return {
-    statusCode: 200,
-    body: `Hello, ${name}`
-  };
 
-   console.log(name)
+
+
+ //  let payload = JSON.parse(event.body).payload;
+ //  const params = JSON.parse(event.body);
+ //  const name = params.firstname || "World";
+ //  const fname = payload.data.firstname;
+
+	// console.log('submission created error testing');
+	// console
+ //  return {
+ //    statusCode: 200,
+ //    body: `Hello, ${name}`
+ //  };
+
+   
 
 
 }
