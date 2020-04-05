@@ -1,10 +1,9 @@
-import querystring from "querystring";
 
 
 exports.handler = function(event, context) {
 	
 
-  const params = querystring.parse(event.body);
+  const params = JSON.parse(event.body);
   const name = params.name || "World";
 
   return {
