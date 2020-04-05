@@ -10,9 +10,9 @@
 
 exports.handler = function(event, context) {
 	
-  const  payload = JSON.parse(event.body);
+  const  payload = JSON.parse(event.body).data;
 
-  console.log(payload.data);
+  console.log(payload);
 
 }
 
