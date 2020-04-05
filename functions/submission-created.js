@@ -12,8 +12,8 @@ exports.handler = function(event, context) {
 	
   const  payload = JSON.parse(event.body);
 
-  console.log(payload);
-  
+  console.log(payload.data);
+
 }
 
 
