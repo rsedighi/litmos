@@ -10,7 +10,7 @@
 
 exports.handler = function(event, context) {
 	
-  const  payload = JSON.parse(event.body.payload.data);
+  const  payload = JSON.parse(event.body.payload);
 
   const fname = payload.firstname;
   const lname = payload.lastname;
@@ -20,12 +20,14 @@ exports.handler = function(event, context) {
 
   console.log(fname, lname, email);
 
+
+
 var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 myHeaders.append("apikey", "50c30fc1-759b-44e2-8299-e8d7adec6c04");
 myHeaders.append("Content-Type", "text/plain");
 
-var raw = "\n{\"Id\":\"\",\n\"UserName\": email,\n\"FirstName\": fname,\n\"LastName\": lname,\n\"FullName\":\"\",\n\"Email\": email,\n\"AccessLevel\":\"Learner\",\n\"DisableMessages\":\"false\",\n\"Active\":\"true\",\n\"IsCustomUsername\":\"true\",\n\"SkipFirstLogin\":\"false\"\n}";
+var raw = "\n\n{\"Id\":\"",\n\"UserName\": \"\",\n\"FirstName\":\"\",\n\"LastName\":\"\",\n\"FullName\":\"\",\n\"Email\": \"rsedighi@gmail.com\",\n\"AccessLevel\":\"Learner\",\n\"DisableMessages\":\"false\",\n\"Active\":\"true\",\n\"IsCustomUsername\":\"true\",\n\"SkipFirstLogin\":\"false\"\n}";
 
 var requestOptions = {
   method: 'POST',
@@ -38,6 +40,8 @@ fetch("https://api.litmos.com/v1.svc/users?source=ramin&format=json&sendmessage=
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
+
+
 
 // var settings = {
 // 			"url": "https://api.litmos.com/v1.svc/users?source=ramin&sendmessage=true",
