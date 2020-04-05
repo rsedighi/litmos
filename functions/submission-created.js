@@ -8,7 +8,7 @@ exports.handler = function(event, context) {
 
   return {
     statusCode: 200,
-    body: `Hello, ${firstname}`
+    body: `Hello, ${name}`
   };
 
 }
